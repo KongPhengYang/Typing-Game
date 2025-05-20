@@ -22,12 +22,6 @@ See your performance stats and try to **beat your personal best**!
 
 ---
 
-### Font Setup
-
-> **Download the custom font** used for the game for proper text formatting and the best visual experience.
-
----
-
 ### Setup Instructions
 
 #### Step 1: Download the Game Files  
