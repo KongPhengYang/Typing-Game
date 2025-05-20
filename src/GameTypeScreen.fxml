@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="GameTypeScreenController"
+      alignment="CENTER" spacing="30"
+      prefWidth="600.0" prefHeight="400.0"
+      style="-fx-background-color: #eef2f5;">
+   <padding>
+      <Insets top="30" right="30" bottom="30" left="30"/>
+   </padding>
+   <children>
+      <Text text="Choose Difficulty"
+            style="-fx-fill: #34495e; -fx-font-size: 28px; -fx-font-weight: bold;">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER" spacing="20">
+         <children>
+            <Button fx:id="easyButton"
+                    text="Easy"
+                    onAction="#onEasyButtonClicked"
+                    prefWidth="120.0"
+                    style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-background-radius: 8;" />
+            <Button fx:id="hardButton"
+                    text="Hard"
+                    onAction="#onHardButtonClicked"
+                    prefWidth="120.0"
+                    style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 8;" />
+         </children>
+      </HBox>
+      <Button fx:id="exitButton"
+              text="Back to Menu"
+              onAction="#onExitButtonClicked"
+              prefWidth="140.0"
+              style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-background-radius: 8;" />
+   </children>
+</VBox>

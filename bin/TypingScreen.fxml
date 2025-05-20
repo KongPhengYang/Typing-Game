@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="rootPane"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="TypingScreenController"
+            prefWidth="600.0" prefHeight="400.0">
+    <top>
+        <HBox alignment="CENTER_RIGHT" spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <Button fx:id="mainMenuButton"
+                        text="Main Menu"
+                        onAction="#onMainMenuClicked"
+                        style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-background-radius: 6;" />
+                <Button fx:id="settingsButton"
+                        text="Settings"
+                        onAction="#onSettingsClicked"
+                        style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-background-radius: 6;" />
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <children>
+                <Text fx:id="paragraphText"
+                      wrappingWidth="560.0"
+                      style="-fx-font-size:16px;" />
+                <TextArea fx:id="inputArea"
+                          prefRowCount="4"
+                          wrapText="true">
+                    <effect>
+                        <DropShadow radius="6" offsetX="0" offsetY="2" color="#888888"/>
+                    </effect>
+                    <padding>
+                        <Insets top="8" right="8" bottom="8" left="8"/>
+                    </padding>
+                </TextArea>
+            </children>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="20">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <Label fx:id="resultLabel"
+                       style="-fx-font-size:14px;"/>
+                <Button fx:id="tryAgainButton"
+                        text="Try Again"
+                        onAction="#onTryAgainClicked"
+                        style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 6;" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>
